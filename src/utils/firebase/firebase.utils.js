@@ -30,16 +30,16 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 export const db = getFirestore();
 
 export const createUserDocumentFromAuth = async (userAuth) => {
-  const userDecRef = doc(db, 'users', userAuth.uid);
+  const userDocRef = doc(db, 'users', userAuth.uid);
 
-  const userSnapchat = await getDoc(userDecRef);
+  const userSnapchat = await getDoc(userDocRef);
 
   if (!userSnapchat.exists()) {
     const { displayName, email } = userAuth;
     const createAt = new Date();
 
     try {
-      await setDoc(userDecRef, {
+      await setDoc(userDocRef, {
         displayName,
         email,
         createAt,
@@ -49,5 +49,5 @@ export const createUserDocumentFromAuth = async (userAuth) => {
     }
   }
 
-  return userDecRef;
+  return userDocRef;
 };
