@@ -4,7 +4,7 @@ import { Outlet, Link } from 'react-router';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
-import { CartContext } from '../../contexts/cart-dropdown.context';
+import { CartContext } from '../../contexts/cart.context';
 import { UserContext } from '../../contexts/user.context';
 
 import { ReactComponent as ShopLogo } from '../../assets/crown.svg';
