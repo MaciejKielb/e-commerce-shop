@@ -20,7 +20,6 @@ export const ImageContainer = styled.div`
   }
 `;
 
-// Shared styles for Name, Quantity, and Price columns
 export const BaseSpan = styled.span`
   width: 23%;
 `;
